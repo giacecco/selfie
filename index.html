@@ -23,10 +23,13 @@
 <p align="center">
 Select the background image: <input id="imageSource" size="80" value="https://raw.github.com/giacecco/selfie/gh-pages/sample_sheep.png"> &nbsp; <input type="button" value="Change" onclick="switchImage()">
 </p>
+<p align="center">
+Send it to your friends by using <a id="fullUrl" href="">this link</a>.
+</p>
 
 <script>
 	$("#imageSource").val(qs["background"] ? qs["background"] : "https://raw.github.com/giacecco/selfie/gh-pages/sample_sheep.png");
-	$('#radioBnw').prop('checked', qs["bnw"]);
+	$('#radioBnw').prop('checked', ("true" == qs["bnw"]));
 	switchColour(!qs["bnw"]);
 	switchImage();
 </script>

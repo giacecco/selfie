@@ -10,10 +10,16 @@ var qs = (function(a) {
     return b;
 })(window.location.search.substr(1).split('&'));
 
-var switchColour = function (colour) {
-	$("#frontImage").attr("src", colour ? "colour.png" : "desaturated.png");
+var updateLink = function () {
+    $("#fullUrl").attr("href", "http://www.digitalcontraptionsimaginarium.co.uk/selfie/?background=" + encodeURIComponent($("#imageSource").val()) + "&bnw=" + $('#radioBnw').prop('checked'));
+}
+
+var switchColour = function () {
+    updateLink();
+	$("#frontImage").attr("src", $('#radioBnw').prop('checked') ? "desaturated.png" : "colour.png");
 }
 
 var switchImage = function () {
+    updateLink();
 	$("#backgroundTd").attr("background", $("#imageSource").val());
 }

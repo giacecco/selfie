@@ -25,6 +25,9 @@ Select the background image: <input id="imageSource" size="80" value="https://ra
 </p>
 
 <script>
+	$("#imageSource").val(qs["background"] ? qs["background"] : "https://raw.github.com/giacecco/selfie/gh-pages/sample_sheep.png");
+	$('#radioBnw').prop('checked', qs["bnw"]);
+	switchColour(!qs["bnw"]);
 	switchImage();
 </script>
 

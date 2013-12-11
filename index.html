@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="lib/underscore-1.5.2.min.js" charset="utf-8"></script>
+	<script src="lib/jquery-2.0.3.min.js" charset="utf-8"></script>
+	<script src="./index.js"></script>
+	<title>Your favourit celeb selfie</title>
+</head>
+<body>
+
+<table align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td id="backgroundTd" width="800" height="450">
+			<img id="frontImage" src="colour.png">
+		</td>
+	</tr>
+</table>
+
+<p align="center">
+<input id="radioColour" name="colour" checked type="radio" onclick="switchColour(true)">Colour &nbsp; <input id="radioBnw" name="colour" type="radio" onclick="switchColour(false)">Black and white
+</p>
+<p align="center">
+Select the bacground image: <input id="imageSource" size="80" value="http://www.digitalcontraptionsimaginarium.co.uk/selfie/sample_sheep.png"> &nbsp; <input type="button" value="Change" onclick="switchImage()">
+</p>
+
+<script>
+	switchImage();
+</script>
+
+</body>
+</html>
